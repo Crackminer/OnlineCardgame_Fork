@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Text?>
+
+<Pane fx:id="Credits" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.sebaty.durak.Controller.CreditsController">
+      <Label fx:id="label" layoutX="250.0" layoutY="32.0" styleClass="labelHead" text="Credits">
+      </Label>
+      <Text fx:id="CreditsText" layoutX="140.0" layoutY="143.0" styleClass="label" text="This Game was created by:&#10; &#10;Yann Bernard &#10;Sebastian Kiel &#10;Patrick Schewe &#10;Robert Witteck  &#10;&#10;as a group project for &#10;Leibniz Universität Hannover - Programmieren 2" textAlignment="CENTER">
+      </Text>
+   <Button fx:id="Back" layoutX="210.0" layoutY="340.0" mnemonicParsing="false" onAction="#goBack" prefHeight="20.0" prefWidth="180.0" text="Back" />
+</Pane>

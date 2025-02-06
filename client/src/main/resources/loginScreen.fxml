@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="Login" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.sebaty.durak.Controller.LoginController">
+    <Pane fx:id="Content" prefHeight="400.0" prefWidth="200.0" styleClass="pane">
+        <Label fx:id="label" alignment="CENTER" layoutX="55.0" layoutY="25.0" styleClass="labelHead" text="Connect">
+        </Label>
+        <TextField fx:id="IPAddress" layoutX="10.0" layoutY="126.0" prefHeight="20.0" prefWidth="180.0" promptText="IP-Address" text="127.0.0.1" />
+        <TextField fx:id="Port" layoutX="10.0" layoutY="166.0" prefHeight="20.0" prefWidth="180.0" promptText="Port" text="8000" />
+        <PasswordField fx:id="Password" layoutX="10.0" layoutY="207.0" prefHeight="20.0" prefWidth="180.0" promptText="Server Password" text="" />
+        <TextField fx:id="UserName" layoutX="10.0" layoutY="248.0" prefHeight="20.0" prefWidth="180.0" promptText="UserName" text="Tester" />
+        <Button fx:id="PlayButton" layoutX="10.0" layoutY="290.0" mnemonicParsing="false" onAction="#checkForEntrance" prefHeight="20.0" prefWidth="180.0" text="Play" />
+        <Button fx:id="Back" layoutX="10.0" layoutY="345.0" mnemonicParsing="false" onAction="#goToHome" prefHeight="20.0" prefWidth="180.0" text="Back" />
+
+        <!--          <TextField fx:id="IPAddress" layoutX="10.0" layoutY="140.0" prefHeight="20.0" prefWidth="180.0" promptText="IP-Address" text="127.0.0.1" />-->
+        <!--         <PasswordField fx:id="Password" layoutX="10.0" layoutY="190.0" prefHeight="20.0" prefWidth="180.0" promptText="Server Password" text="TollerServer" />-->
+        <!--         <TextField fx:id="UserName" layoutX="10.0" layoutY="240.0" prefHeight="20.0" prefWidth="180.0" promptText="UserName" text="DebugTester" />-->
+        <!--       <VBox fx:id="TextFieldVAlign" layoutX="10.0" layoutY="112.0" prefHeight="145.0" prefWidth="180.0" spacing="10.0">-->
+        <!--           <TextField fx:id="IPAddress" prefHeight="20.0" prefWidth="180.0" promptText="IP-Address" text="127.0.0.1" />-->
+        <!--           <TextField fx:id="Port" prefHeight="20.0" prefWidth="180.0" promptText="Port" text="8000" />-->
+        <!--           <PasswordField fx:id="Password" prefHeight="20.0" prefWidth="180.0" promptText="Server Password" text="TollerServer" />-->
+        <!--           <TextField fx:id="UserName" prefHeight="20.0" prefWidth="180.0" promptText="UserName" text="DebugTester" />-->
+        <!--       </VBox>-->
+    </Pane>
+</Pane>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane fx:id="Startup" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.sebaty.durak.Controller.StartupScreenController">
+      <Text fx:id="StartupTitle" layoutX="145.0" layoutY="40.0" styleClass="label" text="The best cardgame ever created" textAlignment="CENTER">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Text>
+      <Text fx:id="StartupSubTitle" layoutX="165.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label" text="by Yann, Robert, Patrick and Sebastian" textAlignment="CENTER" />
+      <Text fx:id="StartupPressX" layoutX="240.0" layoutY="325.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label" text="Press to Continue" />
+      <Button fx:id="StartupContinueButton" layoutX="220.0" layoutY="340.0" mnemonicParsing="false" onAction="#goToLoading" text="To Loading Screen" />
+</Pane>
