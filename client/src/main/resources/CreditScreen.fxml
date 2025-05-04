@@ -19,7 +19,7 @@
         <Text fx:id="header" styleClass="header" text="Credits"/>
         <Text fx:id="subtext"
               text="This Game was created by:&#10;&#10;Jennifer de Pinho Sousa&#10;Sebastian Kiel&#10;Ines Meyer&#10;Fynn Wichary&#10;Anastasiia Zhdanova&#10;&#10;as a group project for&#10;Europaschule Schulzentrum SII Utbremen -&#10;Mittelstufenprojekt"/>
-        <Button fx:id="backButton" mnemonicParsing="false" text="back" BorderPane.alignment="CENTER_LEFT"
+        <Button fx:id="backButton" mnemonicParsing="false" styleClass="backButton" text="Back" BorderPane.alignment="CENTER_LEFT"
                 onAction="#switchToMenu"/>
     </VBox>
     <ImageView fx:id="cornerBottom" pickOnBounds="true" preserveRatio="true" StackPane.alignment="BOTTOM_RIGHT">

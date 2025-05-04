@@ -5,31 +5,31 @@ import de.voidstack_overload.cardgame.connection.MessageType;
 public class LobbyCreateRequest extends BaseRequest {
 
     private final String lobbyName;
-    private final String password;
+    private final String lobbyPassword;
     private final int maxPlayers;
-    private final int botAmount;
+    private final int botCount;
 
-    public LobbyCreateRequest(String lobbyName, String password, int maxPlayers, int botAmount) {
+    public LobbyCreateRequest(String lobbyName, String lobbyPassword, int maxPlayers, int botCount) {
         super(MessageType.LOBBY_CREATE);
         this.lobbyName = lobbyName;
-        this.password = password;
+        this.lobbyPassword = lobbyPassword;
         this.maxPlayers = maxPlayers;
-        this.botAmount = botAmount;
+        this.botCount = botCount;
     }
 
     public String getLobbyName() {
         return lobbyName;
     }
 
-    public String getPassword() {
-        return password;
+    public String getLobbyPassword() {
+        return lobbyPassword;
     }
 
     public int getMaxPlayers() {
         return maxPlayers;
     }
 
-    public int getBotAmount() {
-        return botAmount;
+    public int getBotCount() {
+        return botCount;
     }
 }

@@ -17,8 +17,8 @@
             <Button styleClass="backButton" text="&lt;" onAction="#switchToProfile"/>
             <VBox alignment="CENTER" fx:id="menuPanel" spacing="15">
                 <Text fx:id="menuPanelHeader" text="  Lobby&#10;Settings"/>
-                <TextField fx:id="lobbyName" styleClass="inputField" text="lobby name"/>
-                <PasswordField fx:id="lobbyPassword" styleClass="inputField" text="lobby password"/>
+                <TextField fx:id="lobbyName" styleClass="inputField" promptText="lobby name"/>
+                <PasswordField fx:id="lobbyPassword" styleClass="inputField" promptText="lobby password"/>
                 <HBox alignment="CENTER_LEFT">
                     <Text styleClass="panelText" text="max players"/>
                 </HBox>
@@ -27,7 +27,7 @@
                 <HBox alignment="CENTER_LEFT">
                     <Text styleClass="panelText" text="bots"/>
                 </HBox>
-                <Slider fx:id="botAmount" styleClass="panelSlider" min="0" max="5" value="0" showTickLabels="true"
+                <Slider fx:id="botCount" styleClass="panelSlider" min="0" max="5" value="0" showTickLabels="true"
                         showTickMarks="true" blockIncrement="1" majorTickUnit="1" minorTickCount="0"
                         snapToTicks="true"/>
                 <Button styleClass="normalButton" mnemonicParsing="false" text="create lobby" onAction="#createLobby"/>
@@ -44,4 +44,3 @@
         </ImageView>
     </VBox>
 </GridPane>
-

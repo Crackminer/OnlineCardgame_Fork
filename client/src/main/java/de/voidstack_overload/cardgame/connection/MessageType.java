@@ -16,6 +16,7 @@ public enum MessageType {
     LOBBY_JOIN_ACCEPT,
     LOBBY_JOIN_DENY,
 
+    LOBBY_LIST,
     LOBBY_LIST_REPLY,
 
     GAME_STATE,

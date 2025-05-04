@@ -58,7 +58,7 @@ public class ConnectionManager {
             this.client.onTransmit(GsonUtil.toJson(requestBody), future);
 
             try {
-                return (ResponseEntity<T>) future.get(30, TimeUnit.SECONDS);
+                return (ResponseEntity<T>) future.get(5, TimeUnit.SECONDS);
             } catch (Exception e) {
                 LOGGER.log("Fehler bei Anfrage: " + e.getMessage());
                 return ResponseEntity.error("Zeitüberschreitung oder Verbindungsfehler");

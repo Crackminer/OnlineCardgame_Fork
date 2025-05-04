@@ -20,7 +20,11 @@ public class MessageDispatcher {
 
         for (ServerResponseHandler handler : handlers) {
             if (handler.canHandle(type)) {
-                return Optional.ofNullable(handler.handleMessage(message));
+                var stuff = handler.handleMessage(message);
+                if (stuff != null)
+                {
+                    return Optional.of(stuff);
+                }
             }
         }
 

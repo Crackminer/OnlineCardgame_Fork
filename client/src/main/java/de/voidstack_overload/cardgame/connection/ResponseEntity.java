@@ -20,6 +20,10 @@ public class ResponseEntity<T> {
         return new ResponseEntity<>(true, body);
     }
 
+    public static <T> ResponseEntity<T[]> ok(T[] body) {
+        return new ResponseEntity<>(true, body);
+    }
+
     public static <T> ResponseEntity<T> error(String errorMessage) {
         return new ResponseEntity<>(false, errorMessage);
     }
@@ -34,5 +38,15 @@ public class ResponseEntity<T> {
 
     public String getErrorMessage() {
         return errorMessage;
+    }
+
+    @Override
+    public String toString()
+    {
+        return "ResponseEntity{" +
+               "success=" + success +
+               ", body=" + body +
+               ", errorMessage='" + errorMessage + '\'' +
+               '}';
     }
 }

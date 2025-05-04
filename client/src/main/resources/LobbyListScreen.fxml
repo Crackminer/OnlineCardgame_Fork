@@ -1,61 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
-<?import javafx.scene.effect.*?>
-<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<GridPane alignment="CENTER"
-          prefWidth="1920" prefHeight="1080"
-          maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" styleClass="background" stylesheets="@styles/style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.voidstack_overload.cardgame.controller.LobbyListScreenController">
-
-    <Button styleClass="backButton2" text="&lt;" GridPane.columnSpan="4" GridPane.rowIndex="0"/>
+<GridPane fx:id="masterPane" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" styleClass="background" stylesheets="@styles/style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.voidstack_overload.cardgame.controller.LobbyListScreenController">
+    <Button styleClass="backButton2" text="&lt;" GridPane.columnSpan="4" GridPane.rowIndex="0" onAction="#switchToMenu"/>
     <StackPane GridPane.columnSpan="4" GridPane.rowIndex="0">
-                <GridPane alignment="CENTER" hgap="50" styleClass="lobby">
-                    <columnConstraints>
-                        <ColumnConstraints halignment="CENTER" minWidth="100" />
-                        <ColumnConstraints halignment="CENTER" minWidth="100" />
-                        <ColumnConstraints halignment="CENTER" minWidth="100" />
-                        <ColumnConstraints halignment="CENTER" minWidth="100" />
-                        <ColumnConstraints halignment="CENTER" minWidth="100" />
-                    </columnConstraints>
-                <Label styleClass="lobbyListeLabel" text="Name" GridPane.columnIndex="0" GridPane.rowIndex="0" />
-                <Label styleClass="lobbyListeLabel" text="Players" GridPane.columnIndex="1" GridPane.rowIndex="0" />
-                <Label styleClass="lobbyListeLabel" text="Blocked" GridPane.columnIndex="3" GridPane.rowIndex="0" />
-                <Label styleClass="Join" text="Join" GridPane.columnIndex="4" GridPane.rowIndex="0" />
-         <rowConstraints>
-            <RowConstraints />
-         </rowConstraints>
-                </GridPane>
-            </StackPane>
-    <StackPane GridPane.columnSpan="4" GridPane.rowIndex="1">
-                <GridPane alignment="CENTER" hgap="50" styleClass="lobby">
-                    <columnConstraints>
-                        <ColumnConstraints halignment="CENTER" minWidth="100" />
-                        <ColumnConstraints halignment="CENTER" minWidth="100" />
-                        <ColumnConstraints halignment="CENTER" minWidth="100" />
-                        <ColumnConstraints halignment="CENTER" minWidth="100" />
-                        <ColumnConstraints halignment="CENTER" minWidth="100" />
-                    </columnConstraints>
-                <Label styleClass="lobbyListeLabel" text="Game1" GridPane.columnIndex="0" GridPane.rowIndex="1" />
-                <Label styleClass="lobbyListeLabel" text="3" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                <Label styleClass="lobbyListeLabel" text="/6" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                <ImageView fitHeight="30" fitWidth="30" GridPane.columnIndex="3" GridPane.rowIndex="1">
-                    <image>
-                        <Image url="@textures/lock.png" />
-                    </image>
-            <effect>
-               <Blend />
-            </effect>
-                </ImageView>
-                <Button styleClass="joinButton" text="Join" GridPane.columnIndex="4" GridPane.rowIndex="1" />
-         <rowConstraints>
-            <RowConstraints />
-            <RowConstraints />
-         </rowConstraints>
-                </GridPane>
-    </StackPane>
-    <StackPane GridPane.columnSpan="4" GridPane.rowIndex="2">
         <GridPane alignment="CENTER" hgap="50" styleClass="lobby">
             <columnConstraints>
                 <ColumnConstraints halignment="CENTER" minWidth="100" />
@@ -64,76 +14,17 @@
                 <ColumnConstraints halignment="CENTER" minWidth="100" />
                 <ColumnConstraints halignment="CENTER" minWidth="100" />
             </columnConstraints>
-            <Label styleClass="lobbyListeLabel" text="Game1" GridPane.columnIndex="0" GridPane.rowIndex="2" />
-            <Label styleClass="lobbyListeLabel" text="3" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <Label styleClass="lobbyListeLabel" text="/6" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-            <ImageView fitHeight="30" fitWidth="30" GridPane.columnIndex="3" GridPane.rowIndex="2">
-                <image>
-                    <Image url="@textures/lock.png" />
-                </image>
-                <effect>
-                    <Blend />
-                </effect>
-            </ImageView>
-            <Button styleClass="joinButton" text="Join" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+            <Label styleClass="lobbyListLabel" text="Name" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <Label styleClass="lobbyListLabel" text="Players" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+            <Label styleClass="lobbyListLabel" text="Blocked" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+            <Label styleClass="lobbyListLabel" text="Join" GridPane.columnIndex="4" GridPane.rowIndex="0" />
             <rowConstraints>
-                <RowConstraints />
                 <RowConstraints />
             </rowConstraints>
         </GridPane>
     </StackPane>
-    <StackPane GridPane.columnSpan="4" GridPane.rowIndex="3">
-        <GridPane alignment="CENTER" hgap="50" styleClass="lobby">
-            <columnConstraints>
-                <ColumnConstraints halignment="CENTER" minWidth="100" />
-                <ColumnConstraints halignment="CENTER" minWidth="100" />
-                <ColumnConstraints halignment="CENTER" minWidth="100" />
-                <ColumnConstraints halignment="CENTER" minWidth="100" />
-                <ColumnConstraints halignment="CENTER" minWidth="100" />
-            </columnConstraints>
-            <Label styleClass="lobbyListeLabel" text="Game1" GridPane.columnIndex="0" GridPane.rowIndex="3" />
-            <Label styleClass="lobbyListeLabel" text="3" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <Label styleClass="lobbyListeLabel" text="/6" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-            <ImageView fitHeight="30" fitWidth="30" GridPane.columnIndex="3" GridPane.rowIndex="3">
-                <image>
-                    <Image url="@textures/lock.png" />
-                </image>
-                <effect>
-                    <Blend />
-                </effect>
-            </ImageView>
-            <Button styleClass="joinButton" text="Join" GridPane.columnIndex="4" GridPane.rowIndex="3" />
-            <rowConstraints>
-                <RowConstraints />
-                <RowConstraints />
-            </rowConstraints>
-        </GridPane>
-    </StackPane>
-    <StackPane GridPane.columnSpan="4" GridPane.rowIndex="4">
-        <GridPane alignment="CENTER" hgap="50" styleClass="lobby">
-            <columnConstraints>
-                <ColumnConstraints halignment="CENTER" minWidth="100" />
-                <ColumnConstraints halignment="CENTER" minWidth="100" />
-                <ColumnConstraints halignment="CENTER" minWidth="100" />
-                <ColumnConstraints halignment="CENTER" minWidth="100" />
-                <ColumnConstraints halignment="CENTER" minWidth="100" />
-            </columnConstraints>
-            <Label styleClass="lobbyListeLabel" text="Game1" GridPane.columnIndex="0" GridPane.rowIndex="4" />
-            <Label styleClass="lobbyListeLabel" text="3" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-            <Label styleClass="lobbyListeLabel" text="/6" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-            <ImageView fitHeight="30" fitWidth="30" GridPane.columnIndex="3" GridPane.rowIndex="4">
-                <image>
-                    <Image url="@textures/lock.png" />
-                </image>
-                <effect>
-                    <Blend />
-                </effect>
-            </ImageView>
-            <Button styleClass="joinButton" text="Join" GridPane.columnIndex="4" GridPane.rowIndex="4" />
-            <rowConstraints>
-                <RowConstraints />
-                <RowConstraints />
-            </rowConstraints>
-        </GridPane>
+    <StackPane GridPane.columnSpan="4" GridPane.rowIndex="1" styleClass="background">
+        <ListView fx:id="listView">
+        </ListView>
     </StackPane>
 </GridPane>

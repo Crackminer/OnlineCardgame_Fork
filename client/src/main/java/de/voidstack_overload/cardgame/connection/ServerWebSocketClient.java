@@ -3,6 +3,7 @@ package de.voidstack_overload.cardgame.connection;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import de.voidstack_overload.cardgame.connection.handler.AuthenticationResponseHandler;
+import de.voidstack_overload.cardgame.connection.handler.LobbyListHandler;
 import de.voidstack_overload.cardgame.connection.handler.LobbyResponseHandler;
 import de.voidstack_overload.cardgame.connection.handler.ServerResponseHandler;
 import de.voidstack_overload.cardgame.logging.StandardLogger;
@@ -25,7 +26,8 @@ public class ServerWebSocketClient extends WebSocketClient {
         this.logger = new StandardLogger("Client");
         this.responseHandlers = Arrays.asList(
                 new AuthenticationResponseHandler(),
-                new LobbyResponseHandler()
+                new LobbyResponseHandler(),
+                new LobbyListHandler()
         );
     }
 
@@ -39,10 +41,8 @@ public class ServerWebSocketClient extends WebSocketClient {
         logger.log("Nachricht erhalten: " + message);
         try {
             JsonObject json = JsonParser.parseString(message).getAsJsonObject();
-
             MessageDispatcher dispatcher = new MessageDispatcher(responseHandlers);
             Optional<ResponseEntity<?>> response = dispatcher.dispatch(json);
-
             if (pendingRequest != null && response.isPresent()) {
                 pendingRequest.complete(response.get());
             }

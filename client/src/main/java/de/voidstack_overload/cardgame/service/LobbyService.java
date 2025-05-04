@@ -3,11 +3,12 @@ package de.voidstack_overload.cardgame.service;
 import de.voidstack_overload.cardgame.connection.ResponseEntity;
 import de.voidstack_overload.cardgame.dto.request.LobbyCreateRequest;
 import de.voidstack_overload.cardgame.dto.response.LobbyResponse;
+import de.voidstack_overload.cardgame.utility.JsonBuilder;
 
 public class LobbyService extends BaseService {
 
-    public ResponseEntity<LobbyResponse> lobbyCreate(String lobbyName, String password, int maxPlayers, int botAmount) {
-        LobbyCreateRequest request = new LobbyCreateRequest(lobbyName, password, maxPlayers, botAmount);
+    public ResponseEntity<LobbyResponse> lobbyCreate(String lobbyName, String password, int maxPlayers, int botCount) {
+        LobbyCreateRequest request = new LobbyCreateRequest(lobbyName, password, maxPlayers, botCount);
         return getConnectionManager().sendRequest(request);
     }
 
@@ -23,11 +24,11 @@ public class LobbyService extends BaseService {
 //    }
 //
 //    public void lobbyJoin(String lobbyID, String password) {
-////        JsonBuilder jsonBuilder = new JsonBuilder();
-////        jsonBuilder.add("type", "LOBBY_JOIN");
-////        jsonBuilder.add("lobbyID", lobbyID);
-////        jsonBuilder.add("lobbyPassword", password);
-////        sendMessage(jsonBuilder.toString());
+//        JsonBuilder jsonBuilder = new JsonBuilder();
+//        jsonBuilder.add("type", "LOBBY_JOIN");
+//        jsonBuilder.add("lobbyID", lobbyID);
+//        jsonBuilder.add("lobbyPassword", password);
+//        sendMessage(jsonBuilder.toString());
 //    }
 //
 //    public void lobbyLeave() {
