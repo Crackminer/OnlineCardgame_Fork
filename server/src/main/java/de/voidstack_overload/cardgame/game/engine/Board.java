@@ -132,6 +132,7 @@ public class Board {
                     LOGGER.log("Changing attacker due to original attacker playing their last card.");
                     attacker = secondAttacker;
                     secondAttacker = null;
+                    setActivePlayer(attacker);
                 }
                 playerList.remove(player);
                 if(!player.isBot()) spectatorList.add(player);
