@@ -340,13 +340,21 @@ public class Board {
         if(!activePlayer.isBot()) {
             return;
         }
-        ArrayList<Card> possibleActions = new ArrayList<>();
+        ArrayList<Card> possibleActions;
         ArrayList<Card> botHandCards = new ArrayList<>(activePlayer.getHand());
 
         if(activePlayer == defender) {
             possibleActions = getBotDefenseActions(botHandCards);
         } else {
-            possibleActions = getBotAttackActions(botHandCards);
+            // defense lostt so we can throw in cards as attacker and the last slot already has card thrown in
+            if (this.throwingIn && this.stacks[5][0] != null)
+            {
+                possibleActions = new ArrayList<>();
+            }
+            else
+            {
+                possibleActions = getBotAttackActions(botHandCards);
+            }
         }
         // If no card can be played, skip instead
         if(possibleActions.isEmpty()) {
